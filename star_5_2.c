@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,j,m,li;
+    int n,i,j,m,li,k=0;
     scanf("%d",&n);
     if(n%2==1)
         m=n;
@@ -19,13 +19,6 @@ int main()
                 else
                     printf("_");
             }
-            else if(i==1||i==(n-2)) //บรรทัดที่สองและรองสุดท้าย
-            {
-                if(j==(li-1)||j==(li+1))
-                    printf("*");
-                else
-                    printf("_");
-            }
             else if((i==(li+1)&&(n%2==0))||i==li) //บรรทัดตรงกลาง
             {
                 if(j==0||j==(m-1))
@@ -33,9 +26,26 @@ int main()
                 else
                     printf("_");
             }
-
+            else if(i<=li) //บรรทัดที่สองและรองสุดท้าย
+            {
+                if(j==(li-k)||j==(li+k))
+                    printf("*");
+                else
+                    printf("_");
+            }
+            /*else
+            {
+                if(i<(li+1)||i>li)
+                {
+                    if(j==(n)||j==(n-2))
+                        printf("*");
+                    else
+                        printf("_");
+                }
+            }*/
         }
         printf("\n");
+        k++;
     }
     return 0;
 }
