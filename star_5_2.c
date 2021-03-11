@@ -17,21 +17,21 @@ int main()
                 if(j==li++)
                     printf("*");
                 else
-                    printf("-");
+                    printf("_");
             }
-            else if(n>4&&i==1||i==(n-2))
+            else if(n>4&&(i==1||i==(n-2)))
             {
                 if(j%2!=0)
                     printf("*");
                 else
-                    printf("-");
+                    printf("_");
             }
             else if(i==li++||i==li)
             {
                 if(j==0||j==(m-1))
                     printf("*");
                 else
-                    printf("-");
+                    printf("_");
             }
         }
         printf("\n");
