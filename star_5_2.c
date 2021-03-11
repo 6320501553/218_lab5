@@ -12,14 +12,14 @@ int main()
         for(j=0; j<m; j++)
         {
             li=m/2;
-            if(i==0) //บรรทัดที่แรกและสุดท้าย
+            if(i==0)
             {
                 if(j==li)
                     printf("*");
                 else
                     printf("_");
             }
-            else if((i==(li+1)&&(n%2==0))||i==li) //บรรทัดตรงกลาง
+            else if((i==(li+1)&&(n%2==0))||i==li)
             {
                 if(j==0||j==(m-1))
                     printf("*");
